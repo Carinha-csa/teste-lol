@@ -34,7 +34,7 @@ function App() {
       </main>
 
       <footer>
-
+          &copy;Cauã Andrade
       </footer>
 
     </div>

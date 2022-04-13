@@ -10,23 +10,18 @@ type dddsType = [{
 
 
 
-type plans = [{
+type contract = [{
     contractname: string,
     calltime: number
 }]
 
-type plansTime = {
-    name: string,
-    callTime: number
-}
-
 export default function DDDS(){
     
-    const [dddsTable, setDDDs] = useState<dddsType>()
-
     const ddds = ['011', '016', '017', '018']
 
-    const [contract, setContract] = useState<plans>()
+    const [dddsTable, setDDDs] = useState<dddsType>()
+
+    const [contract, setContract] = useState<contract>()
 
     const [tableResult, setTableResult] = useState<JSX.Element>()
 
@@ -71,7 +66,7 @@ export default function DDDS(){
         }
         const contractClientSelected = document.querySelectorAll('select')[2].value
 
-        let verifyContractExists = () => {
+        let verifyContractExists = () => { // Verify if the contract exists
             if(contract){
 
                 for(let item of contract){
@@ -97,7 +92,7 @@ export default function DDDS(){
         const timeClientCall = document.querySelector('input') // Get the time the client want call
 
         if(timeClientCall){
-            time = Number(timeClientCall.value) <= 0? 30:Number(timeClientCall.value);
+            time = Number(timeClientCall.value) <= 0? 30:Number(timeClientCall.value); // Set a minimum value if client dosn't espcify 
         }
        
         return time
@@ -134,9 +129,9 @@ export default function DDDS(){
         return result
     }
 
-    async function insertOnScreen(){ // This function will insert the data on screen
+    async function insertResultOnScreen(){ // This function will insert the data on screen
 
-        const data = await calcPlan()
+        const data = await calcPlan() // Await for this funcion complet
 
         console.log(data)
         setTableResult( // Final table where show the calc for user call
@@ -184,7 +179,7 @@ export default function DDDS(){
                 <select id="originSelect" className="selects">
                     {
                     
-                    // origin ddd's for select
+                    //render origin ddd's for select
 
                     ddds?.map((item, index) => {
                         return(
@@ -200,7 +195,7 @@ export default function DDDS(){
                 <select id="destinySelect" className="selects">
                     {
                     
-                    // destiny ddds for select
+                    //render destiny ddds for select
 
                     ddds?.map((item, index) => {
                         return(
@@ -216,7 +211,7 @@ export default function DDDS(){
                 <select className="selects">
                     {   
 
-                        // Contracts
+                        //render Contracts
 
                         contract?.map((item, index) => {
                             return(
@@ -234,7 +229,7 @@ export default function DDDS(){
                     {tableResult}
                 </div>
 
-                <button onClick={insertOnScreen}>Calcular valor!</button>
+                <button onClick={insertResultOnScreen}>Calcular valor!</button>
             </div>
         </div>
     )

@@ -145,7 +145,11 @@
     }
 
     footer{
+        align-items: center;
         background-color: black;
+        color: #fff;
+        display: flex;
+        justify-content: center;
         height: 120px;
     }
 }

@@ -1,7 +1,7 @@
 const pg = require('pg')
 
 
-const queryContracts = async () => {
+const queryContracts = async () => { // Make a query for get the contracts in database
 
     const client = new pg.Client({ // new client instance
         host: 'localhost',

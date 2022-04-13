@@ -38,7 +38,7 @@ _npm install ou npm i_ para assim instalar as dependencias do aplicativo.
 - Logo após as variaveis de estado temos um useEffect um dos react-hooks
   1. Após a renderização da página ele executa uma função.
   
-#### Fazendo o fetch para o backend
+#### **_Fazendo o fetch para o backend_**
 
 1. Primeiro declaramos o **fetch** com o endereço para backend que desejamos receber os dados
 
@@ -51,7 +51,7 @@ _npm install ou npm i_ para assim instalar as dependencias do aplicativo.
      
    - Em seguidas temos duas funções para atualizar os estados das váriaveis dddsTable e Contract
 
-#### Funcionalidades
+#### **_Funcionalidades_**
 
 1. findValueForRoute
    - Ela é responsavél por encontrar o valor entre as rotas que o cliente está ligando por exemplo: *011 há 016 tem um valor de 1.90* por minuto*, e ao finalizar ela retornara esse valor

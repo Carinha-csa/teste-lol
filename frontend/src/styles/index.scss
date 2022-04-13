@@ -1,0 +1,15 @@
+html{
+    overflow: auto;
+    scroll-behavior: smooth;
+    body{
+        background-color: #fff;
+        height: max-content;
+        margin: 0;
+
+        #root{
+            height: max-content;
+        }
+
+    }
+    font-family: Poppins, sans-serif;
+}

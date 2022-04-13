@@ -46,7 +46,7 @@ _npm install ou npm i_ para assim instalar as dependencias do aplicativo.
  
  ### Diretório subFunctionsDb
  
- #### queryContracts.js | Importa os contratos existentes no banco de dados
+ ### queryContracts.js | Importa os contratos existentes no banco de dados
   1. Importamos o pg que é uma biblioteca para utilizar o postgresSQL dentro do Node
   
   2. Definimos uma função assincrona queryContracts
@@ -75,7 +75,7 @@ _npm install ou npm i_ para assim instalar as dependencias do aplicativo.
 **Por fim exportamos a função queryContracts**
 
 
- #### queryDDs.js | Faz a query para pegar a tabela com os ddds e o valor entre as ligações 
+ ### queryDDs.js | Faz a query para pegar a tabela com os ddds e o valor entre as ligações 
  
   1. Importamos o pg que é uma biblioteca para utilizar o postgresSQL dentro do Node
   

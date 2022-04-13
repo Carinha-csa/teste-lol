@@ -103,3 +103,5 @@ _npm install ou npm i_ para assim instalar as dependencias do aplicativo.
   6. Retornamos o dados que foram conseguidos no item 4
 
 **Por fim exportamos a função dddsTable**
+
+**_Para mais detalhes consultar o código_**
